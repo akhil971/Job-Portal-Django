@@ -1,0 +1,250 @@
+{% extends 'base.html' %}
+
+{% block title %}
+homepage
+{% endblock %}
+
+{% block body %}
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      {% if user.is_authenticated %}
+        <span class="eyebrow">Welcome, {{ user.username }}! </span><br>
+      {% else %}
+      <span class="eyebrow">Welcome, seekers</span><br>
+      
+      {% endif %}
+      <span class="eyebrow">India's Fastest Growing Job Portal</span>
+    
+      <h1>Your Next <span class="hl">Jobs</span> Is Closer Than You Think.</h1>
+      <p class="lead">From Bengaluru's tech parks to Delhi's corporate towers — lakhs of verified openings across every state, updated every hour.</p>
+      <div class="hero-ctas">
+        <a href="{% url 'jobs' %}" class="btn btn-primary">Browse Jobs</a>
+        <a href="{% url 'register' %}" class="btn btn-ghost">Post a Vacancy</a>
+      </div>
+      <p class="hero-note">Trusted by 3,200+ companies across 28 states and union territories</p>
+    </div>
+    <div class="hero-art">
+      <div class="hero-card">
+        <span class="tag">Hiring Now</span>
+        <h4>Backend Engineer</h4>
+        <p class="meta">TechNiwas Pvt Ltd · Pune · Hybrid</p>
+        <p class="pay">₹9-14 <small>LPA</small></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card"><div class="num">48,500+</div><div class="label">Live Jobs</div></div>
+      <div class="stat-card"><div class="num">3,200+</div><div class="label">Hiring Companies</div></div>
+      <div class="stat-card"><div class="num">1.2L+</div><div class="label">Registered Candidates</div></div>
+      <div class="stat-card"><div class="num">28</div><div class="label">States Covered</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="container search-wrap">
+  <div class="search-box">
+    <div class="search-field">
+      <label>Job title or keyword</label>
+      <input type="text" placeholder="e.g. Software Engineer, Bank PO">
+    </div>
+    <div class="search-field">
+      <label>Location</label>
+      <select>
+        <option>Bengaluru</option>
+        <option>Mumbai</option>
+        <option>Delhi NCR</option>
+        <option>Hyderabad</option>
+        <option>Pune</option>
+        <option>Chennai</option>
+      </select>
+    </div>
+    <div class="search-field">
+      <label>Category</label>
+      <select>
+        <option>IT & Software</option>
+        <option>Banking & Finance</option>
+        <option>Government Jobs</option>
+        <option>Sales & Marketing</option>
+      </select>
+    </div>
+    <a href="#" class="btn btn-primary">Search Jobs</a>
+  </div>
+</div>
+
+<section class="block" id="categories">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Trending Categories</span>
+      <h2>Find Work Across Every Industry</h2>
+      <p>Ten in-demand fields, from Govt. Job to start-up tech roles.</p>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card"><div class="cat-icon">💻</div><h4>IT & Software</h4><p class="count">6,240 openings</p></div>
+      <div class="cat-card"><div class="cat-icon">🏦</div><h4>Banking & Finance</h4><p class="count">3,180 openings</p></div>
+      <div class="cat-card"><div class="cat-icon">🏛️</div><h4>Government Jobs</h4><p class="count">2,050 openings</p></div>
+      <div class="cat-card"><div class="cat-icon">📈</div><h4>Sales & Marketing</h4><p class="count">4,410 openings</p></div>
+      <div class="cat-card"><div class="cat-icon">🩺</div><h4>Healthcare & Nursing</h4><p class="count">2,760 openings</p></div>
+      <div class="cat-card"><div class="cat-icon">🎓</div><h4>Teaching & Education</h4><p class="count">1,930 openings</p></div>
+      <div class="cat-card"><div class="cat-icon">☎️</div><h4>BPO & Customer Support</h4><p class="count">3,860 openings</p></div>
+      <div class="cat-card"><div class="cat-icon">🏭</div><h4>Manufacturing</h4><p class="count">2,410 openings</p></div>
+      <div class="cat-card"><div class="cat-icon">🏨</div><h4>Hospitality & Travel</h4><p class="count">1,570 openings</p></div>
+      <div class="cat-card"><div class="cat-icon">🎨</div><h4>Design & Creative</h4><p class="count">1,120 openings</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block tint" id="jobs">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Latest Openings</span>
+      <h2>Featured Jobs This Week</h2>
+      <p>Fresh listings from companies actively hiring right now.</p>
+    </div>
+    <div class="jobs-grid">
+      <div class="job-card">
+        <div class="job-top">
+          <div class="job-logo">IS</div>
+          <div><h4>Full Stack Developer</h4><p class="company">Infytech Solutions · Bengaluru</p></div>
+        </div>
+        <div class="job-tags"><span>Full Time</span><span>Hybrid</span></div>
+        <div class="job-meta"><span>Experience: 2-4 years</span><span>Openings: 6</span></div>
+        <div class="job-foot"><span class="pay">₹8-12 LPA</span><a href="job-details.html">Apply Now →</a></div>
+      </div>
+      <div class="job-card">
+        <div class="job-top">
+          <div class="job-logo">ZF</div>
+          <div><h4>Bank Probationary Officer</h4><p class="company">Zenith Finserv · Delhi NCR</p></div>
+        </div>
+        <div class="job-tags"><span>Full Time</span><span>On-site</span></div>
+        <div class="job-meta"><span>Experience: 0-2 years</span><span>Openings: 20</span></div>
+        <div class="job-foot"><span class="pay">₹6-8 LPA</span><a href="job-details.html">Apply Now →</a></div>
+      </div>
+      <div class="job-card">
+        <div class="job-top">
+          <div class="job-logo">BB</div>
+          <div><h4>Digital Marketing Executive</h4><p class="company">Bharat Bazaar · Mumbai</p></div>
+        </div>
+        <div class="job-tags"><span>Full Time</span><span>Remote</span></div>
+        <div class="job-meta"><span>Experience: 1-3 years</span><span>Openings: 4</span></div>
+        <div class="job-foot"><span class="pay">₹4-6 LPA</span><a href="job-details.html">Apply Now →</a></div>
+      </div>
+      <div class="job-card">
+        <div class="job-top">
+          <div class="job-logo">TC</div>
+          <div><h4>Customer Support Associate</h4><p class="company">TeleConnect India · Hyderabad</p></div>
+        </div>
+        <div class="job-tags"><span>Full Time</span><span>Night Shift</span></div>
+        <div class="job-meta"><span>Experience: 0-1 years</span><span>Openings: 35</span></div>
+        <div class="job-foot"><span class="pay">₹3-4.5 LPA</span><a href="job-details.html">Apply Now →</a></div>
+      </div>
+      <div class="job-card">
+        <div class="job-top">
+          <div class="job-logo">SH</div>
+          <div><h4>Staff Nurse</h4><p class="company">Suvidha Health · Pune</p></div>
+        </div>
+        <div class="job-tags"><span>Full Time</span><span>On-site</span></div>
+        <div class="job-meta"><span>Experience: 1-2 years</span><span>Openings: 10</span></div>
+        <div class="job-foot"><span class="pay">₹3.5-5 LPA</span><a href="job-details.html">Apply Now →</a></div>
+      </div>
+      <div class="job-card">
+        <div class="job-top">
+          <div class="job-logo">PK</div>
+          <div><h4>UI/UX Designer</h4><p class="company">PixelKargo Studio · Chennai</p></div>
+        </div>
+        <div class="job-tags"><span>Full Time</span><span>Hybrid</span></div>
+        <div class="job-meta"><span>Experience: 2-5 years</span><span>Openings: 3</span></div>
+        <div class="job-foot"><span class="pay">₹7-10 LPA</span><a href="job-details.html">Apply Now →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Working Process</span>
+      <h2>Four Steps To Your Next Offer Letter</h2>
+      <p>A simple path from sign-up to your first day at work.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-card"><div class="process-num">1</div><h4>Create Your Profile</h4><p>Sign up in minutes and tell us what kind of role you're looking for.</p></div>
+      <div class="process-card"><div class="process-num">2</div><h4>Build Your Resume</h4><p>Use our resume builder to put your skills front and centre.</p></div>
+      <div class="process-card"><div class="process-num">3</div><h4>Apply To Jobs</h4><p>Filter by city, salary, and industry, then apply with one click.</p></div>
+      <div class="process-card"><div class="process-num">4</div><h4>Get Hired</h4><p>Track every application and interview from a single dashboard.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block tint" id="cities">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Jobs By Location</span>
+      <h2>Find Work In Your City</h2>
+      <p>Openings across India's biggest employment hubs.</p>
+    </div>
+    <div class="city-grid">
+      <div class="city-card"><h4>Bengaluru, Karnataka</h4><p class="count">9,340 openings</p></div>
+      <div class="city-card c2"><h4>Mumbai, Maharashtra</h4><p class="count">8,120 openings</p></div>
+      <div class="city-card c3"><h4>Delhi NCR</h4><p class="count">7,860 openings</p></div>
+      <div class="city-card c3"><h4>Hyderabad, Telangana</h4><p class="count">5,240 openings</p></div>
+      <div class="city-card"><h4>Pune, Maharashtra</h4><p class="count">4,610 openings</p></div>
+      <div class="city-card c2"><h4>Chennai, Tamil Nadu</h4><p class="count">3,980 openings</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Success Stories</span>
+      <h2>What Job Seekers Say</h2>
+      <p>Real journeys from application to offer letter.</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card">
+        <p class="test-quote">"I applied to a Bengaluru start-up on a Monday and had an offer letter by Friday. The dashboard made tracking every round painless."</p>
+        <div class="test-person">
+          <div class="avatar">AS</div>
+          <div><h5>Ananya Sharma</h5><span>Software Engineer, Bengaluru</span></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <p class="test-quote">"After two years of searching, JobPath's filters helped me find a role that actually matched my experience and salary expectations."</p>
+        <div class="test-person">
+          <div class="avatar">RV</div>
+          <div><h5>Rohit Verma</h5><span>Business Analyst, Pune</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block tint" id="companies">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Top Recruiters</span>
+      <h2>Companies Hiring On JobPath</h2>
+      <p>Employers actively recruiting across India this month.</p>
+    </div>
+    <div class="company-grid">
+      <div class="company-card"><div class="job-logo">NC</div><div><h5>Norland Textiles</h5><span>New Delhi · 45 openings</span></div></div>
+      <div class="company-card"><div class="job-logo">GC</div><div><h5>Ganges Capital</h5><span>Kolkata · 32 openings</span></div></div>
+      <div class="company-card"><div class="job-logo">TD</div><div><h5>Techman Digital</h5><span>Hyderabad · 35 openings</span></div></div>
+      <div class="company-card"><div class="job-logo">TC</div><div><h5>Tarang & Co</h5><span>Ahmedabad · 55 openings</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <div class="container">
+    <h3>Ready to post your next opening and reach lakhs of candidates?</h3>
+    <a href="{% url 'register' %}" class="btn btn-outline">Post a Job — Free</a>
+  </div>
+</section>
+
+{% endblock %}

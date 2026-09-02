@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+register
+{% endblock %}
+
+{% block body %}
+<section class="block" style="padding:70px 0;">
+  <div class="container auth-wrap">
+    <form class="form-card auth-card" method="post">
+      {% csrf_token %}
+
+      <div class="auth-head">
+        <h2>Create Your Account</h2>
+        <p>Join thousands finding work across India</p>
+      </div>
+
+      <div class="form-row">
+        <label>Full Name</label>
+        <input type="text" placeholder="e.g. Aditya Rao" name="name">
+      </div>
+      <div class="form-row">
+        <label>Email Address</label>
+        <input type="email" placeholder="you@example.com" name="email">
+      </div>
+     
+      <div class="form-row">
+        <label>Password</label>
+        <input type="password" placeholder="Create a password" name="password">
+      </div>
+      <div class="form-check">
+        <input type="checkbox">
+        <span>I agree to the Terms & Conditions and Privacy Policy</span>
+      </div>
+      <button type="submit" class="btn btn-primary">Create Account</button>
+      <p class="form-switch">Already have an account? <a href="{% url 'login' %}">Sign in</a></p>
+    </form>
+  </div>
+</section>
+
+{% endblock %}

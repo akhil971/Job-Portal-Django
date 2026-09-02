@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+login
+{% endblock %}
+
+{% block body %}
+<section class="block" style="padding:70px 0;">
+  <div class="container auth-wrap">
+    <form class="form-card auth-card" method="post">
+      {% csrf_token %}
+      <div class="auth-head">
+        <h2>Welcome Back</h2>
+        <p>Sign in to continue to your JobPath account</p>
+      </div>
+
+      <div class="role-toggle">
+        <a href="#" class="active">Candidate</a>
+        <a href="#">Employer</a>
+      </div>
+
+      <div class="form-row">
+        <label>Username</label>
+        <input type="text" placeholder="Enter your username" name="username">
+      </div>
+      <div class="form-row">
+        <label>Password</label>
+        <input type="password" placeholder="Enter your password" name="password">
+      </div>
+      <div class="form-check">
+        <label style="display:flex;align-items:center;gap:8px;"><input type="checkbox"> Remember me</label>
+        <span style="margin-left:auto;"><a href="#" style="color:var(--teal);font-weight:600;">Forgot password?</a></span>
+      </div>
+      <button type="submit" class="btn btn-primary">Sign In</button>
+      <p class="form-switch">Don't have an account? <a href="{% url 'register' %}">Create one</a></p>
+    </form>
+  </div>
+</section>
+
+{% endblock %}

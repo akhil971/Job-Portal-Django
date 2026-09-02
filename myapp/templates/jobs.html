@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+
+{% block title %}
+jobs
+{% endblock %}
+
+{% block body %}
+<section class="page-banner">
+  <div class="container">
+    <h1>Browse Jobs</h1>
+    <div class="breadcrumb"><a href="{% url 'home' %}">Home</a> / <span>Find Jobs</span></div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <div class="layout-split">
+      <aside class="filter-panel">
+        <h4>Filter Results</h4>
+        <div class="filter-group">
+          <h5>Category</h5>
+          <label><input type="checkbox" checked> IT & Software</label>
+          <label><input type="checkbox"> Banking & Finance</label>
+          <label><input type="checkbox"> Government Jobs</label>
+          <label><input type="checkbox"> Sales & Marketing</label>
+          <label><input type="checkbox"> Healthcare</label>
+        </div>
+        <div class="filter-group">
+          <h5>Location</h5>
+          <label><input type="checkbox"> Bengaluru</label>
+          <label><input type="checkbox" checked> Mumbai</label>
+          <label><input type="checkbox"> Delhi NCR</label>
+          <label><input type="checkbox"> Pune</label>
+          <label><input type="checkbox"> Hyderabad</label>
+        </div>
+        <div class="filter-group">
+          <h5>Job Type</h5>
+          <label><input type="checkbox" checked> Full Time</label>
+          <label><input type="checkbox"> Remote</label>
+          <label><input type="checkbox"> Hybrid</label>
+          <label><input type="checkbox"> Internship</label>
+        </div>
+        <div class="filter-group">
+          <h5>Salary Range (LPA)</h5>
+          <input type="range" min="0" max="30">
+        </div>
+        <a href="#" class="btn btn-outline" style="width:100%;justify-content:center;">Apply Filters</a>
+      </aside>
+
+      <div>
+        <div class="list-toolbar">
+          <span class="count">Showing 1-6 of 48,500 jobs</span>
+          <select>
+            <option>Most Relevant</option>
+            <option>Newest First</option>
+            <option>Salary: High to Low</option>
+          </select>
+        </div>
+
+        <a href="job-details.html" class="job-row">
+          <div class="job-logo">IS</div>
+          <div class="job-row-main">
+            <h4>Full Stack Developer</h4>
+            <p class="company">Infytech Solutions · Bengaluru</p>
+            <div class="job-tags"><span>Full Time</span><span>Hybrid</span><span>2–4 yrs</span></div>
+          </div>
+          <div class="job-row-end">
+            <span class="pay">₹8-12 LPA</span>
+            <span class="posted">Posted 2 days ago</span>
+          </div>
+        </a>
+
+        <a href="{% url 'Job_detail' %}" class="job-row">
+          <div class="job-logo">ZF</div>
+          <div class="job-row-main">
+            <h4>Bank Probationary Officer</h4>
+            <p class="company">Zenith Finserv · Delhi NCR</p>
+            <div class="job-tags"><span>Full Time</span><span>On-site</span><span>0–2 yrs</span></div>
+          </div>
+          <div class="job-row-end">
+            <span class="pay">₹6-8 LPA</span>
+            <span class="posted">Posted 1 day ago</span>
+          </div>
+        </a>
+
+        <a href="{% url 'Job_detail' %}" class="job-row">
+          <div class="job-logo">BB</div>
+          <div class="job-row-main">
+            <h4>Digital Marketing Executive</h4>
+            <p class="company">Bharat Bazaar · Mumbai</p>
+            <div class="job-tags"><span>Full Time</span><span>Remote</span><span>1–3 yrs</span></div>
+          </div>
+          <div class="job-row-end">
+            <span class="pay">₹4-6 LPA</span>
+            <span class="posted">Posted 3 days ago</span>
+          </div>
+        </a>
+
+        <a href="{% url 'Job_detail' %}" class="job-row">
+          <div class="job-logo">TC</div>
+          <div class="job-row-main">
+            <h4>Customer Support Associate</h4>
+            <p class="company">TeleConnect India · Hyderabad</p>
+            <div class="job-tags"><span>Full Time</span><span>Night Shift</span><span>0–1 yrs</span></div>
+          </div>
+          <div class="job-row-end">
+            <span class="pay">₹3-4.5 LPA</span>
+            <span class="posted">Posted 5 days ago</span>
+          </div>
+        </a>
+
+        <a href="{% url 'Job_detail' %}" class="job-row">
+          <div class="job-logo">SH</div>
+          <div class="job-row-main">
+            <h4>Staff Nurse</h4>
+            <p class="company">Suvidha Health · Pune</p>
+            <div class="job-tags"><span>Full Time</span><span>On-site</span><span>1–2 yrs</span></div>
+          </div>
+          <div class="job-row-end">
+            <span class="pay">₹3.5-5 LPA</span>
+            <span class="posted">Posted 1 week ago</span>
+          </div>
+        </a>
+
+        <a href="{% url 'Job_detail' %}" class="job-row">
+          <div class="job-logo">PK</div>
+          <div class="job-row-main">
+            <h4>UI/UX Designer</h4>
+            <p class="company">PixelKargo Studio · Chennai</p>
+            <div class="job-tags"><span>Full Time</span><span>Hybrid</span><span>2–5 yrs</span></div>
+          </div>
+          <div class="job-row-end">
+            <span class="pay">₹7-10 LPA</span>
+            <span class="posted">Posted 1 week ago</span>
+          </div>
+        </a>
+
+        <div class="pagination">
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">→</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

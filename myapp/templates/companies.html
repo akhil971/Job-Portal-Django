@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}
+companies
+{% endblock %}
+
+{% block body %}
+<section class="page-banner">
+  <div class="container">
+    <h1>Companies Hiring Now</h1>
+    <div class="breadcrumb"><a href="{% url 'home' %}">Home</a> / <span>Companies</span></div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <div class="layout-split">
+      <aside class="filter-panel">
+        <h4>Filter Companies</h4>
+        <div class="filter-group">
+          <h5>Industry</h5>
+          <label><input type="checkbox" checked> IT & Software</label>
+          <label><input type="checkbox"> Banking & Finance</label>
+          <label><input type="checkbox"> Textiles</label>
+          <label><input type="checkbox"> Healthcare</label>
+        </div>
+        <div class="filter-group">
+          <h5>City</h5>
+          <label><input type="checkbox"> New Delhi</label>
+          <label><input type="checkbox" checked> Kolkata</label>
+          <label><input type="checkbox"> Hyderabad</label>
+          <label><input type="checkbox"> Ahmedabad</label>
+        </div>
+        <div class="filter-group">
+          <h5>Company Size</h5>
+          <label><input type="checkbox"> 1-50 employees</label>
+          <label><input type="checkbox" checked> 51200 employees</label>
+          <label><input type="checkbox"> 200+ employees</label>
+        </div>
+        <a href="#" class="btn btn-outline" style="width:100%;justify-content:center;">Apply Filters</a>
+      </aside>
+
+      <div>
+        <div class="list-toolbar">
+          <span class="count">Showing 1-8 of 3,200 companies</span>
+          <select>
+            <option>Most Openings</option>
+            <option>Alphabetical</option>
+            <option>Newest</option>
+          </select>
+        </div>
+        <div class="company-grid" style="grid-template-columns:repeat(2,1fr);gap:20px;">
+          <a href="{% url 'Job_detail' %}" class="company-card"><div class="job-logo">IS</div><div><h5>Infytech Solutions</h5><span>Bengaluru · 42 openings</span></div></a>
+          <a href="{% url 'Job_detail' %}" class="company-card"><div class="job-logo">ZF</div><div><h5>Zeeshan Finserv</h5><span>Delhi NCR · 28 openings</span></div></a>
+          <a href="{% url 'Job_detail' %}" class="company-card"><div class="job-logo">BB</div><div><h5>Bharat Bazaar</h5><span>Mumbai · 19 openings</span></div></a>
+          <a href="{% url 'Job_detail' %}" class="company-card"><div class="job-logo">TC</div><div><h5>zeeTeleConnect India</h5><span>Hyderabad · 63 openings</span></div></a>
+          <a href="{% url 'Job_detail' %}" class="company-card"><div class="job-logo">SH</div><div><h5>Suvidha Health</h5><span>Pune · 15 openings</span></div></a>
+          <a href="{% url 'Job_detail' %}" class="company-card"><div class="job-logo">PK</div><div><h5>Pixelzee Studio</h5><span>Chennai · 9 openings</span></div></a>
+          <a href="{% url 'Job_detail' %}" class="company-card"><div class="job-logo">NC</div><div><h5>Norland Textiles</h5><span>New Delhi · 45 openings</span></div></a>
+          <a href="{% url 'Job_detail' %}" class="company-card"><div class="job-logo">GC</div><div><h5>Ganges Capital</h5><span>Kolkata · 32 openings</span></div></a>
+        </div>
+        <div class="pagination">
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">→</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

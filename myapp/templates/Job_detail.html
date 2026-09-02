@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Job_detail
+{% endblock %}
+
+{% block body %}
+<section class="page-banner">
+  <div class="container">
+    <h1>Full Stack Developer</h1>
+    <div class="breadcrumb"><a href="{% url 'home' %}">Home</a> / <a href="{% url 'jobs' %}">Find Jobs</a> / <span>Full Stack Developer</span></div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <div class="details-layout">
+      <div>
+        <div class="details-card">
+          <div class="details-head">
+            <div class="job-logo">IS</div>
+            <div>
+              <h1>Full Stack Developer</h1>
+              <p class="company">Infytech Solutions · Bengaluru, Karnataka</p>
+            </div>
+          </div>
+          <div class="job-tags">
+            <span>Full Time</span><span>Hybrid</span><span>2–4 years</span><span>6 Openings</span>
+          </div>
+
+          <h3>Job Description</h3>
+          <p>Infytech Solutions is looking for a Full Stack Developer to join its product engineering team in Bengaluru. You will work on customer-facing web applications used by clients across India, collaborating closely with design and product teams.</p>
+
+          <h3>Key Responsibilities</h3>
+          <ul>
+            <li>Build and maintain scalable web applications using modern frameworks</li>
+            <li>Collaborate with product and design teams on new features</li>
+            <li>Write clean, tested, and well-documented code</li>
+            <li>Participate in code reviews and sprint planning</li>
+          </ul>
+
+          <h3>Requirements</h3>
+          <ul>
+            <li>2-4 years of experience in full stack web development</li>
+            <li>Strong knowledge of JavaScript, HTML and CSS</li>
+            <li>Familiarity with REST APIs and relational databases</li>
+            <li>Good communication skills in English and Hindi</li>
+          </ul>
+
+          <h3>Perks & Benefits</h3>
+          <ul>
+            <li>Health insurance for employee and family</li>
+            <li>Flexible hybrid work policy</li>
+            <li>Annual learning allowance</li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="apply-box">
+        <div class="pay">₹8-12 <small>LPA</small></div>
+        <span style="font-size:13px;color:var(--muted);">Estimated annual salary</span>
+        <a href="register.html" class="btn btn-primary">Apply Now</a>
+        <a href="#" class="btn btn-outline" style="width:100%;justify-content:center;margin-bottom:10px;">Save Job</a>
+        <div class="apply-meta"><span>Posted</span><span>2 days ago</span></div>
+        <div class="apply-meta"><span>Job Type</span><span>Full Time</span></div>
+        <div class="apply-meta"><span>Experience</span><span>2-4 years</span></div>
+        <div class="apply-meta"><span>Location</span><span>Bengaluru</span></div>
+        <div class="apply-meta"><span>Openings</span><span>6</span></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

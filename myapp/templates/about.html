@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block title %}
+about
+{% endblock %}
+
+{% block body %}
+<section class="page-banner">
+  <div class="container">
+    <h1>About JobPath</h1>
+    <div class="breadcrumb"><a href="{% url 'about' %}">Home</a> / <span>About</span></div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container about-grid">
+    <div>
+      <span class="eyebrow">Our Story</span>
+      <h2 style="font-size:30px;margin-bottom:16px;">Connecting India's Workforce, One Job At A Time</h2>
+      <p>JobPath started in 2019 with a simple goal — make it easier for job seekers in every corner of India, not just the metro cities, to find verified, well-paying work.</p>
+      <p>Today, we work with over 3,200 companies across 28 states, from large enterprises hiring in bulk to growing start-ups looking for their first ten employees.</p>
+      <p>Whether you're searching for your first job out of college or a government vacancy back home, JobPath is built to get you there faster.</p>
+    </div>
+    <div>
+      <div class="hero-card" style="transform:none;width:100%;">
+        <span class="tag">Since 2019</span>
+        <h4>48,500+ Live Jobs</h4>
+        <p class="meta">Across IT, banking, government, healthcare and more</p>
+        <p class="pay">1.2L+ <small>candidates placed</small></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block tint">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What We Stand For</span>
+      <h2>Our Core Values</h2>
+      <p>The principles that guide every feature we build.</p>
+    </div>
+    <div class="cat-grid" style="grid-template-columns:repeat(3,1fr);">
+      <div class="value-card"><div class="cat-icon">✅</div><h4>Verified Listings</h4><p>Every job posting is reviewed before it goes live, so you never waste time on fake vacancies.</p></div>
+      <div class="value-card"><div class="cat-icon">🌏</div><h4>Every Region, Every Language</h4><p>From metros to tier-2 towns, we list openings across every state and union territory.</p></div>
+      <div class="value-card"><div class="cat-icon">🤝</div><h4>Fair For Everyone</h4><p>Free for candidates always, and transparent, affordable pricing for employers.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Leadership</span>
+      <h2>Meet The Team</h2>
+      <p>A small team based out of Pune and Bengaluru, working with employers nationwide.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card"><div class="avatar">RK</div><h5>Rahul Khanna</h5><span>Co-Founder & CEO</span></div>
+      <div class="team-card"><div class="avatar">PN</div><h5>Priya Nair</h5><span>Co-Founder & COO</span></div>
+      <div class="team-card"><div class="avatar">AM</div><h5>Arjun Mehta</h5><span>Head of Product</span></div>
+      <div class="team-card"><div class="avatar">SK</div><h5>Sneha Kulkarni</h5><span>Head of Employer Success</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <div class="container">
+    <h3>Join thousands of job seekers who found work through JobPath.</h3>
+    <a href="{% url 'register' %}" class="btn btn-outline">Create Free Account</a>
+  </div>
+</section>
+
+{% endblock %}
